@@ -1,0 +1,19 @@
+.searchContainer {
+  width: 100%;
+
+  display: inline-flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  align-items: center;
+}
+
+i {
+  padding: 0.5rem;
+  color: gray;
+}
+
+.searchBox {
+  border: 0;
+  padding: 25px;
+  outline: none;
+}

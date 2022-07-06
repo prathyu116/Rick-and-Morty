@@ -1,0 +1,48 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.card__left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card__left__text span {
+  font-weight: 600;
+  font-size: small;
+}
+.card__left__img img {
+  width: 60px;
+  border-radius: 50%;
+}
+.card__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card__right__species span {
+  font-weight: 400;
+  font-size: small;
+}
+.card__right__Green {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: green;
+}
+.card__right__Gray {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%;
+}
+.card__right__species {
+}
