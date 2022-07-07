@@ -3,7 +3,7 @@ import { Modal } from "react-bootstrap";
 import "./DetailsUserCard.css"
 export function DetailsUserCard(props) {
   return (
-    <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+    <Modal {...props} size="md" aria-labelledby="contained-modal-title-vcenter" centered>
       <Modal.Header closeButton />
       <Modal.Body className="modal__body">
         <div className="top">
@@ -15,9 +15,9 @@ export function DetailsUserCard(props) {
             <div className="card__right">
               <div className={props.status == "Alive" ? "card__right__Green" : "card__right__Gray"}></div>
               <div className="card__right__species">
-                <h3 style={{ color: "gray", fontSize: "13px" }}>
+                <span style={{ color: "gray", fontSize: "13px" }}>
                   {props.status}-{props.species}
-                </h3>
+                </span>
               </div>
             </div>
           </div>

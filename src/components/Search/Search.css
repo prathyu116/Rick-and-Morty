@@ -10,10 +10,11 @@
 i {
   padding: 0.5rem;
   color: gray;
+  margin-left: 20px;
 }
 
 .searchBox {
   border: 0;
-  padding: 25px;
+  padding: 20px;
   outline: none;
 }

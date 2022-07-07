@@ -17,8 +17,9 @@
   align-items: flex-start;
   justify-content: center;
 }
-h3 {
+.card__right__species span {
   font-family: "Poppins";
+  
 }
 .down {
   display: flex;
