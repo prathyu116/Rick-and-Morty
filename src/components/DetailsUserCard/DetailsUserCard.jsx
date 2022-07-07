@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal } from "react-bootstrap";
 import "./DetailsUserCard.css"
-export function DetailsUserCard(props) {
+const DetailsUserCard = (props) => {
   return (
     <Modal {...props} size="md" aria-labelledby="contained-modal-title-vcenter" centered>
       <Modal.Header closeButton />
@@ -49,3 +49,4 @@ export function DetailsUserCard(props) {
     </Modal>
   );
 }
+export default React.memo(DetailsUserCard);

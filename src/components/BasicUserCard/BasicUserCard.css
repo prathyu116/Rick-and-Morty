@@ -28,15 +28,24 @@
   gap: 10px;
 }
 
+/* .card__right__species{
+} */
+
 .card__right__species span {
   font-weight: 400;
-  font-size: small;
+  font-size: 14px;
 }
 .card__right__Green {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: green;
+}
+.card__right__Red {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
 }
 .card__right__Gray {
   width: 10px;

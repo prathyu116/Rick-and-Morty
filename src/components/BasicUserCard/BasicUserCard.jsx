@@ -1,8 +1,8 @@
 import React from "react";
-import { Alert, Button, Modal } from "react-bootstrap";
-import { DetailsUserCard } from "../DetailsUserCard/DetailsUserCard";
-import "./CharacterItem.css";
-const CharacterItem = ({ item }) => {
+import  DetailsUserCard  from "../DetailsUserCard/DetailsUserCard";
+import "./BasicUserCard.css";
+const BasicUserCard = ({ item }) => {
+ console.log("charitem")
       const [modalShow, setModalShow] = React.useState(false);
 
   return (
@@ -17,7 +17,10 @@ const CharacterItem = ({ item }) => {
           </div>
         </div>
         <div className="card__right">
-          <div className={item.status == "Alive" ? "card__right__Green" : "card__right__Gray"}></div>
+          <div
+            className={item.status === "Alive" ? "card__right__Green" : item.status === "Dead" ? "card__right__Red" : "card__right__Gray"}
+          >
+          </div>
           <div className="card__right__species">
             <span>
               {item.status}-{item.species}
@@ -33,11 +36,11 @@ const CharacterItem = ({ item }) => {
         species={item.species}
         image={item.image}
         gender={item.gender}
-        location = {item.location.name}
-        origin = {item.origin.name}
+        location={item.location.name}
+        origin={item.origin.name}
       />
     </>
   );
 };
 
-export default CharacterItem;
+export default React.memo(BasicUserCard)

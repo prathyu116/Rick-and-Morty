@@ -1,24 +1,19 @@
-.App{
+.App {
+  /* text-align: center; */
+  width: 35%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main {
+  text-align: center;
 font-family: 'Poppins', sans-serif;
-    /* text-align: center; */
-    width: 35%;
+}
+@media (max-width: 832px) {
+  .App {
+    width: 90%;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-   
-}
-.main{
-    text-align: center;
-     font-family: 'Poppins', sans-serif;
-
-}
-  @media (max-width: 832px) {
-    .App{
-    /* text-align: center; */
-    width: 100%;
-   
-   
-}
   }
+}

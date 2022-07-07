@@ -1,10 +1,10 @@
 import axios from "axios";
-import { debounce } from "lodash";
-import { useEffect, useState } from "react";
-import "./App.css";
-import Chargrid from "./components/Chargrid/Chargrid";
+import { useCallback, useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import Search from "./components/Search/Search";
+import "./App.css";
+import AllUserCards from "./components/AllUserCards/AllUserCards";
+
 function App() {
   const [item, setItem] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -18,10 +18,9 @@ function App() {
   }, [query, currentPage]);
 
   const fetchItem = async () => {
-    const result = await axios
+     await axios
       .get(` https://rickandmortyapi.com/api/character/?name=${query}&page=${currentPage}`)
       .then(function (response) {
-        console.log(response.data.results);
         if (scroll) {
           setItem([...item, ...response.data.results]);
           setIsLoading(false);
@@ -39,11 +38,11 @@ function App() {
   const scrollToEnd = () => {
     setTimeout(() => {
       setCurrentPage(currentPage + 1);
-    }, 300);
+    }, 700);
   };
   window.onscroll = () => {
     console.log(window.innerHeight + document.documentElement.scrollTop, document.documentElement.offsetHeight);
-    if (Math.floor(window.innerHeight + document.documentElement.scrollTop) === document.documentElement.offsetHeight) {
+    if (Math.ceil(window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
       setScroll(true);
       scrollToEnd();
     }
@@ -53,8 +52,8 @@ function App() {
     <div className="main">
       <Header />
       <div className="App">
-        <Search getQuery={(q) => setQuery(q)} />
-        <Chargrid item={item} isLoading={isLoading} />
+        <Search getQuery={useCallback((q) => setQuery(q), [query, currentPage])} />
+        <AllUserCards item={item} isLoading={isLoading} />
       </div>
     </div>
   );

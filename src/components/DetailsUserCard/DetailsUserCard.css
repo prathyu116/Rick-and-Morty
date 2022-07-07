@@ -17,10 +17,7 @@
   align-items: flex-start;
   justify-content: center;
 }
-.card__right__species span {
-  font-family: "Poppins";
-  
-}
+
 .down {
   display: flex;
   justify-content: space-around;
@@ -42,9 +39,8 @@
 .colom_2_row2 p {
   margin-bottom: 0px;
   color: gray;
-  font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
-h6 {
+h3 {
   font-family: "Poppins", sans-serif;
 }

@@ -1,14 +1,15 @@
 import React from 'react'
-
+import "./Header.css"
 const Header = () => {
+  console.log("HEADER");
   return (
-    <div>
+    <header>
         <h1>Rick and Morty Search</h1>
-    </div>
+    </header>
   )
 }
 
-export default Header
+export default React.memo(Header)
 
 // font-family: 'Dongle', sans-serif;
 // font-family: 'Montserrat', sans-serif;
